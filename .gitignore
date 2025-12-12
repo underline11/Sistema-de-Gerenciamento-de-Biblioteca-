@@ -1,0 +1,17 @@
+# Arquivos do OneCompiler
+*.log
+*.tmp
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Configurações locais
+.env
+*.bak
+*.swp
+*.swo
+
+# Diretórios de cache
+__pycache__/
+cache/

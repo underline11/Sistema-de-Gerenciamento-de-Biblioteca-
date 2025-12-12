@@ -1,0 +1,80 @@
+# Sistema de Biblioteca — Projeto SQL
+
+Este projeto apresenta um sistema simples de gerenciamento de biblioteca utilizando MySQL.  
+Inclui criação completa do banco de dados, tabelas, inserção de dados, consultas e regras de integridade referencial com chaves estrangeiras.
+
+## 🎯 Objetivo
+Demonstrar domínio sobre:
+- Criação de banco de dados
+- Modelagem de tabelas com relacionamentos
+- Chaves estrangeiras
+- Inserção, consulta e exclusão de dados
+- Integridade referencial
+- Execução de SQL no ambiente OneCompiler
+
+## 📌 Estrutura do Banco de Dados
+
+O banco contém quatro tabelas:
+
+### **1. autores**
+- id_autor (PK)
+- nome
+- nacionalidade
+
+### **2. livros**
+- id_livro (PK)
+- titulo
+- ano_publicacao
+- genero
+- id_autor (FK)
+
+### **3. usuarios**
+- id_usuario (PK)
+- nome
+- email
+- telefone
+
+### **4. emprestimos**
+- id_emprestimo (PK)
+- id_usuario (FK)
+- id_livro (FK)
+- data_emprestimo
+- data_devolucao
+
+Os relacionamentos usam *FOREIGN KEY* para garantir integridade dos dados.
+
+## 📚 Funcionalidades Implementadas
+
+### ✅ Inserção de dados
+O script insere autores, livros, usuários e empréstimos reais para teste.
+
+### ✅ Consultas incluídas
+- Lista livros com seus autores  
+- Lista empréstimos com nome do usuário  
+- Lista livros com ano e autor  
+
+### ✅ Teste de integridade
+Uma operação `DELETE` proposital gera corretamente o erro de chave estrangeira, demonstrando que o banco está protegendo dados relacionados.
+
+## ▶ Como executar
+1. Acesse **OneCompiler → MySQL**  
+2. Cole o conteúdo do arquivo `queries.sql`  
+3. Clique em **Run**  
+4. O resultado das consultas aparecerá no painel da direita
+
+## ✔ Resultado esperado
+- Tabelas criadas com sucesso  
+- Dados inseridos  
+- Consultas exibindo livros, autores e empréstimos  
+- Erro final de exclusão (intencional) provando que as FKs estão ativas  
+
+## 🧩 Aprendizados mostrados no projeto
+- Modelagem relacional básica  
+- Uso de PRIMARY KEY e FOREIGN KEY  
+- Inserção de múltiplos registros
+- Consulta com JOIN
+- Integridade referencial
+- Estrutura SQL organizada e comentada  
+
+## 📄 Licença
+Este projeto está disponível apenas para fins acadêmicos e demonstração.
